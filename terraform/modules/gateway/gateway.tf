@@ -1,6 +1,6 @@
 data "aws_lb" "lb" {
   tags = {
-    "kubernetes.io/service-name" : "ingress-nginx/ingress-nginx-controller"
+    "service.k8s.aws/stack" : "ingress-nginx/ingress-nginx-controller"
   }
 }
 
