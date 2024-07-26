@@ -1,17 +1,10 @@
 @startuml architecture
 
-title "HealthMed API Gateway Architecture"
+title "API Gateway e Componentes"
 
-node "Users" as gateway {
-    component "API Gateway" as api_gateway
+node "AWS" as gateway {
+    component "API Gateway (proxy)" as api_gateway
     component "VPC Link" as vpc_link
-    component "NLB" as nlb
-    component "EKS Cluster" as eks
 }
-
-gateway --> api_gateway
-api_gateway --> vpc_link
-vpc_link --> nlb
-nlb --> eks
 
 @enduml
